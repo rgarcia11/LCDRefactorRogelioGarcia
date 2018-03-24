@@ -10,7 +10,7 @@ from impresora import *
 
 def lectura():
     """
-    Lee de entrada estandar linea por linea.
+    Lee de entrada estandar linea por linea y la verifica.
     El formato esperado de cada linea es:
         size,numero
     De la forma:
@@ -19,26 +19,27 @@ def lectura():
         5,1542
         2,123
         0,0
+    No es valida una entrada con size>10, ni size=0.
+    Entradas que no esten separadas por coma o que tengan mas
+    o menos elementos de los requeridos (2) no seran impresas.
+
     Primero se leen todas las lineas y se guarda en memoria.
     Esto se debe a que la salida debe ser apartada de la entrada.
     Es decir, primero se lee todo y luego se imprime todo.
     """
     for linea in sys.stdin:
-        #Puede contener espacios o saltos de linea
         linea = linea.strip()
         linea = linea.split(',')
+        if not len(linea) == 2:
+            continue
         size = linea[0]
         numero = linea[1]
         if not (esNumero(size) and esNumero(numero)):
-            #print('La entrada {},{} no es valida'.format(size,numero))
             continue
-
         if size == '0' and numero == '0':
-            #print('Ha finalizado el programa con un "0,0"')
             break
-        if size == '0':
-            #print('La entrada {},{} no es valida; size no debe ser 0'.format(size,numero))
-            break
+        if size == '0' or int(size)>10:
+            continue
         lineas.append((size,numero))
 
 def escritura():
@@ -56,7 +57,6 @@ def escritura():
     for linea in lineas:
         size = int(linea[0])
         numero = linea[1]
-        #Se procesan los "techos"
         techo(size, numero)
         cuerpoSuperior(size, numero)
         mitad(size, numero)

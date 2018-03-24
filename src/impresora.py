@@ -14,12 +14,10 @@ def techo(size, numero):
         numero: el numero que se quiere imprimir. Puede componerse
             de varios digitos.
     """
+    techo = ''
     for digito in numero:
-        print(' ',end='',flush=True)
-        for tam in range(0,size):
-            print(switch_techo[digito],end='',flush=True)
-        print(' ',end='',flush=True)
-    print('')
+        techo += ' '+switch_techo[digito]*size+' '
+    print(techo)
 
 def cuerpoSuperior(size, numero):
     """
@@ -37,13 +35,10 @@ def cuerpoSuperior(size, numero):
         numero: el numero que se quiere imprimir. Puede componerse
             de varios digitos.
     """
-    for tam in range(0, size):
-        for digito in numero:
-            print(switch_cuerpo_superior[digito][0],end='',flush=True)
-            for tam2 in range(0,size):
-                print(' ',end='',flush=True)
-            print(switch_cuerpo_superior[digito][1],end='',flush=True)
-        print('')
+    cuerpoSuperior = ''
+    for digito in numero:
+        cuerpoSuperior += switch_cuerpo_superior[digito][0] + (' '*size) + switch_cuerpo_superior[digito][1]
+    print((cuerpoSuperior+'\n')*size, end='', flush=True)
 
 def mitad(size, numero):
     """
@@ -56,12 +51,11 @@ def mitad(size, numero):
         numero: el numero que se quiere imprimir. Puede componerse
             de varios digitos.
     """
+    mitad = ''
     for digito in numero:
-        print(switch_cuerpo_superior[digito][0],end='',flush=True)
-        for tam in range(0,size):
-            print(switch_mitad[digito],end='',flush=True)
-        print(switch_cuerpo_superior[digito][1],end='',flush=True)
-    print('')
+        mitad += switch_cuerpo_superior[digito][0] + switch_mitad[digito]*size + switch_cuerpo_superior[digito][1]
+    print(mitad)
+
 
 def cuerpoInferior(size, numero):
     """
@@ -79,13 +73,11 @@ def cuerpoInferior(size, numero):
         numero: el numero que se quiere imprimir. Puede componerse
             de varios digitos.
     """
-    for tam in range(0, size):
-        for digito in numero:
-            print(switch_cuerpo_inferior[digito][0],end='',flush=True)
-            for tam2 in range(0,size):
-                print(' ',end='',flush=True)
-            print(switch_cuerpo_inferior[digito][1],end='',flush=True)
-        print('')
+    cuerpoInferior = ''
+    for digito in numero:
+        cuerpoInferior += switch_cuerpo_inferior[digito][0] + (' '*size) + switch_cuerpo_inferior[digito][1]
+    print((cuerpoInferior+'\n')*size, end='', flush=True)
+
 
 def piso(size, numero):
     """
@@ -98,9 +90,7 @@ def piso(size, numero):
         numero: el numero que se quiere imprimir. Puede componerse
             de varios digitos.
     """
+    piso = ''
     for digito in numero:
-        print(switch_cuerpo_inferior[digito][0],end='',flush=True)
-        for tam in range(0,size):
-            print(switch_piso[digito],end='',flush=True)
-        print(switch_cuerpo_inferior[digito][1],end='',flush=True)
-    print('')
+        piso += switch_cuerpo_inferior[digito][0] + switch_piso[digito]*size + switch_cuerpo_inferior[digito][1]
+    print(piso)
