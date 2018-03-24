@@ -14,10 +14,14 @@ El enunciado del problema es el siguiente:
 > Entre cada impresión debe haber una línea blanca. 
 >
 > Ejemplo: 
-> Entrada: 
-> 2,12345 
-> 3,67890 
-> 0,0 
+> Entrada:
+>
+> 2,12345
+>
+> 3,67890
+>
+> 0,0
+>
 >   
 > Salida:   
 >  <pre>  
