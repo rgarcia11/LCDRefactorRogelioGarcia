@@ -22,22 +22,25 @@ El enunciado del problema es el siguiente:
 >
 > 0,0
 >
->   
-> Salida:   
->  <pre>  
->    _ _  _ _        _ _
-> |     |    | |  | |
+>   
+> Salida:   
+>  <pre>  
+>    _ _  _ _        _ _
+> |     |    | |  | |
 > |  _ _| _ _| |__| |_ _
-> | |        |    |     |
-> | |_ _  _ _|    |  _ _|
+> | |        |    |     |
+> | |_ _  _ _|    |  _ _|
 > 
->  _ _ _  _ _ _   _ _ _   _ _ _   _ _ _ 
-> |            | |     | |     | |     |
-> |            | |     | |     | |     |
-> |_ _ _       | |_ _ _| |_ _ _| |     |
-> |     |      | |     |       | |     |
-> |     |      | |     |       | |     |
-> |_ _ _|      | |_ _ _|  _ _ _| |_ _ _|
+>  _ _ _  _ _ _   _ _ _   _ _ _   _ _ _ 
+> |            | |     | |     | |     |
+> |            | |     | |     | |     |
+> |_ _ _       | |_ _ _| |_ _ _| |     |
+> |     |      | |     |       | |     |
+> |     |      | |     |       | |     |
+> |_ _ _|      | |_ _ _|  _ _ _| |_ _ _|
 
 
+ "_" en los caracteres horizontales.
 
+Se siguieron las indicaciones sobre el tamaño de cada dígito como se citó anteriormente. Se hizo un cambio para no imprimir "-"
+sino "_" en los caracteres especiales.
