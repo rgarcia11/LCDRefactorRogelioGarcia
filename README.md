@@ -39,3 +39,5 @@ El enunciado del problema es el siguiente:
 |     |      | |     |       | |     |
 |     |      | |     |       | |     |
 |_ _ _|      | |_ _ _|  _ _ _| |_ _ _|
+
+El unico cambio que se hizo fue imprimir "\_" en lugar de "-"
