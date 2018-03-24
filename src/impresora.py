@@ -101,6 +101,6 @@ def piso(size, numero):
     for digito in numero:
         print(switch_cuerpo_inferior[digito][0],end='',flush=True)
         for tam in range(0,size):
-            print(switch_techo[digito],end='',flush=True)
+            print(switch_piso[digito],end='',flush=True)
         print(switch_cuerpo_inferior[digito][1],end='',flush=True)
     print('')
