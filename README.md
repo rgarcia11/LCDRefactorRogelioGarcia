@@ -24,8 +24,8 @@ El enunciado del problema es el siguiente:
 >
 >   
 > Salida:   
->  <pre>  
 
+  <pre>  
    _ _  _ _        _ _
 |     |    | |  | |
 |  _ _| _ _| |__| |_ _
