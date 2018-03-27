@@ -1,6 +1,6 @@
 # LCDRefactorRogelioGarcia
-La idea de este ejercicio es mostrar habilidades para programar.
 
+## Intención
 El enunciado del problema es el siguiente:
 > # LCD refactor
 >
@@ -41,5 +41,21 @@ El enunciado del problema es el siguiente:
 |_ _ _|      | |_ _ _|  _ _ _| |_ _ _|
 
 </pre>
+
+## Descripción del proyecto
+### Generalidades
+El código fue realizado en Python 3.6.1. Correrlo en versiones anteriores, particularmente Python2, puede generar errores.
+
+El código se encuentra comentado en su totalidad. Hay cuatro scripts en python:
+LCD.py --> script principal del proyecto. Se debe correr este script para dar inicio al programa.
+definiciones.py --> define cómo se van a imprimir los números.
+impresora.py --> hace uso de definiciones.py para dar el formato de impresión. En este script se define el output que será impreso en LCD.py.
+testImpresora.py --> script de pruebas unitarias que verifica el correcto funcionamiento de la impresora. Este script se corre por aparte.
+
+En general, se priorizó obtener un código sencillo y altamente modificable.
+
+### Funcionamiento
+Se dividieron los dígitos en cinco secciones. Cada dígito tiene un techo, una parte superior, una mitad, una parte inferior y un piso.
+Techo: se compone totalmente de espacios (" ") o de guiones bajos ("\_")
 
 El unico cambio que se hizo fue imprimir "\_" en lugar de "-"
