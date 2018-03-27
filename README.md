@@ -55,7 +55,55 @@ testImpresora.py --> script de pruebas unitarias que verifica el correcto funcio
 En general, se priorizó obtener un código sencillo y altamente modificable.
 
 ### Funcionamiento
-Se dividieron los dígitos en cinco secciones. Cada dígito tiene un techo, una parte superior, una mitad, una parte inferior y un piso.
-Techo: se compone totalmente de espacios (" ") o de guiones bajos ("\_")
+Parámetros para dibujar un número: size y el número. Size define el tamaño en el que se debe dibujar el número.
 
+Se dividieron los dígitos en cinco secciones. Cada dígito tiene un techo, una parte superior, una mitad, una parte inferior y un piso.
+Techo: se componen totalmente de espacios (" ") o de guiones bajos ("\_"). Al lado izquierdo y derecho del techo hay siempre un espacio (" ").
+Mitad y piso: similar a techo, se componen principalmente de espacios (" ") o de guiones bajos ("\_"), pero adicionalmente tienen a su lado izquierdo y derecho un espacio (" ") o una barra ("|").
+Parte superior e inferior: pueden componerse de varias líneas, dependiendo de size. Cada línea tiene un símbolo al lado izquierdo y derecho, que puede ser espacio (" ") o barra ("|"), y entre ellos un número de espacios que depende de size.
+
+Por ejemplo, el dígito 9 con size 2:
+
+<pre>
+ ___      techo: un espacio, dos guiones bajos y otro espacio
+|   |     parte superior: dos lineas iguales; una barra, tres espacios y otra barra.
+|   |     
+|___|     mitad: una barra, tres guiones bajos y otra barra
+    |     parte inferior: dos lineas iguales; cuatro espacios y una barra.
+    |
+ ___|     piso: un espacio, dos guiones bajos y una barra
+</pre>
+
+Como se puede ver, el techo siempre tiene dos espacios en los límites izquierdo y derecho, la mitad tiene los mismos símbolos que la parte superior a sus lados izquierdo y derecho, respectivamente, y el piso comparte los lados izquierdo y derecho con la parte inferior del dígito.
+
+Para saber qué elemento utilizar al dibujar una de las partes de un dígito, se tienen cinco diccionarios, uno por cada parte del dígito. Ahí se define si un nueve tiene dos barras al lado izquierdo y derecho en la parte superior, pero solo una barra en el lado derecho la parte inferior.
+
+<pre>
+Si se quiere agregar un caracter adicional, se agrega a este diccionario y se modifican las verificaciones del input del programa para aceptarlo.
+</pre>
+
+### Input
+El programa únicamente recibe parejas de dos números separados por comas. Cada pareja debe ser separada por un salto de línea. El programa siempre finaliza con "0,0". El único error en el input que acepta el programa son espacios laterales, por ejemplo " 10 , 129038 ". Se asume que estos espacios son involuntarios, y no afectan el entendimiento de la intención del usuario.
+* Ejemplo de input correcto:
+<pre>
+1,9
+3,0123456789
+10,951
+ 10 , 18 
+0,0
+</pre>
+
+* Ejemplos de inputs incorrectos, caracteres no permitidos, size > 10, size = 0, letras:
+<pre>
+10:534
+10'531
+10//531
+11,5
+0,5
+10,5a5
+ 10 , 129038  
+0,0
+</pre>
+
+### Otras consideraciones
 El unico cambio que se hizo fue imprimir "\_" en lugar de "-"
