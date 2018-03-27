@@ -105,5 +105,59 @@ El programa únicamente recibe parejas de dos números separados por comas. Cada
 0,0
 </pre>
 
+### Output
+Se ingresan las siguientes líneas (nota, para probarlo con el código, es posible que se necesite copiar el input ejemplo y pegarlo en un editor de texto, y luego volver a copiar y  pegarlo en el programa):
+
+Out:
+<pre>
+1,9
+3,0123456789
+10,951
+0,0
+</pre>
+
+In:
+<pre>
+ _
+| |
+|_|
+  |
+ _|
+
+ ___       ___  ___       ___  ___  ___  ___  ___
+|   |    |    |    ||   ||    |        ||   ||   |
+|   |    |    |    ||   ||    |        ||   ||   |
+|   |    |    |    ||   ||    |        ||   ||   |
+|   |    | ___| ___||___||___ |___     ||___||___|
+|   |    ||        |    |    ||   |    ||   |    |
+|   |    ||        |    |    ||   |    ||   |    |
+|   |    ||        |    |    ||   |    ||   |    |
+|___|    ||___  ___|    | ___||___|    ||___| ___|
+
+ __________  __________
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|          ||                      |
+|__________||__________            |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+           |           |           |
+ __________| __________|           |
+</pre>
+
 ### Otras consideraciones
-El unico cambio que se hizo fue imprimir "\_" en lugar de "-"
+El unico cambio que se hizo fue imprimir "\_" en lugar de "-".
