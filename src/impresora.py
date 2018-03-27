@@ -17,7 +17,7 @@ def techo(size, numero):
     techo = ''
     for digito in numero:
         techo += ' '+switch_techo[digito]*size+' '
-    print(techo)
+    return techo
 
 def cuerpoSuperior(size, numero):
     """
@@ -38,7 +38,7 @@ def cuerpoSuperior(size, numero):
     cuerpoSuperior = ''
     for digito in numero:
         cuerpoSuperior += switch_cuerpo_superior[digito][0] + (' '*size) + switch_cuerpo_superior[digito][1]
-    print((cuerpoSuperior+'\n')*size, end='', flush=True)
+    return (cuerpoSuperior+'\n')*(size-1)+cuerpoSuperior
 
 def mitad(size, numero):
     """
@@ -54,7 +54,7 @@ def mitad(size, numero):
     mitad = ''
     for digito in numero:
         mitad += switch_cuerpo_superior[digito][0] + switch_mitad[digito]*size + switch_cuerpo_superior[digito][1]
-    print(mitad)
+    return mitad
 
 
 def cuerpoInferior(size, numero):
@@ -76,7 +76,7 @@ def cuerpoInferior(size, numero):
     cuerpoInferior = ''
     for digito in numero:
         cuerpoInferior += switch_cuerpo_inferior[digito][0] + (' '*size) + switch_cuerpo_inferior[digito][1]
-    print((cuerpoInferior+'\n')*size, end='', flush=True)
+    return (cuerpoInferior+'\n')*(size-1)+cuerpoInferior
 
 
 def piso(size, numero):
@@ -93,4 +93,4 @@ def piso(size, numero):
     piso = ''
     for digito in numero:
         piso += switch_cuerpo_inferior[digito][0] + switch_piso[digito]*size + switch_cuerpo_inferior[digito][1]
-    print(piso)
+    return piso

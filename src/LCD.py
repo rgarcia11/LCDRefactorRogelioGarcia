@@ -4,7 +4,6 @@ en estilo pantalla de LCD teniendo en cuenta el tamanho que
 entra por la entrada estandar del programa.
 Mas detalles en el README del proyecto y en cada funcion.
 """
-#Imports
 import sys
 from impresora import *
 
@@ -57,11 +56,11 @@ def escritura():
     for linea in lineas:
         size = int(linea[0])
         numero = linea[1]
-        techo(size, numero)
-        cuerpoSuperior(size, numero)
-        mitad(size, numero)
-        cuerpoInferior(size, numero)
-        piso(size, numero)
+        print(techo(size, numero))
+        print(cuerpoSuperior(size, numero))
+        print(mitad(size, numero))
+        print(cuerpoInferior(size, numero)),
+        print(piso(size, numero))
         print()
 
 
