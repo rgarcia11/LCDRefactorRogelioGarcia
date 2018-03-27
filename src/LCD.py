@@ -25,6 +25,10 @@ def lectura():
     Primero se leen todas las lineas y se guarda en memoria.
     Esto se debe a que la salida debe ser apartada de la entrada.
     Es decir, primero se lee todo y luego se imprime todo.
+
+    Este metodo debe ser editado si se quiere cambiar el input aceptado
+    por el programa, por ejemplo, para incluir nuevos caracteres.
+    Tambien se debe modificar el script definiciones.py.
     """
     for linea in sys.stdin:
         linea = linea.strip()
@@ -32,7 +36,7 @@ def lectura():
         if not len(linea) == 2:
             continue
         size = linea[0]
-        numero = linea[1]
+        numero = linea[1].strip()
         if not (esNumero(size) and esNumero(numero)):
             continue
         if size == '0' and numero == '0':
@@ -48,7 +52,7 @@ def escritura():
     en el estilo de una pantalla LCD.
     Se utiliza el caracter "_" para simbolos horizontales
     y el caracter "|" para simbolos verticales.
-    Cada dígito tiene las siguientes medidas:
+    Cada digito tiene las siguientes medidas:
         columnas: size+2
         filas: 2*size + 3
     Entre cada impresion debe haber una linea blanca.

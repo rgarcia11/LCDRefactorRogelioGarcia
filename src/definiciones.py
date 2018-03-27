@@ -16,6 +16,11 @@ switch_cuerpo_inferior: diccionario con la definicion
 switch_piso: diccionario con la definicion de la ultima linea
     de cada numero.
 
+Este script puede ser editado para incluir nuevos caracteres.
+Por ejemplo, para incluir el caracter 'a', se debe incluir en cada diccionario.
+switch_techo = {'a':'_',...}
+o
+switch_techo['a']='_'
 """
 lineas = []
 switch_techo = {'1':' ','2':'_','3':'_','4':' ','5':'_','6':'_','7':'_','8':'_','9':'_','0':'_'}
