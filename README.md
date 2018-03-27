@@ -160,4 +160,4 @@ In:
 </pre>
 
 ### Otras consideraciones
-El unico cambio que se hizo fue imprimir "\_" en lugar de "-".
+El unico cambio que se hizo fue imprimir "\_" en lugar de "-", dado que en el enunciado se especificada "-" pero en el ejemplo se mostraba "\_", y el guión bajo es más legible.
