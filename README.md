@@ -53,6 +53,7 @@ impresora.py --> hace uso de definiciones.py para dar el formato de impresión. 
 testImpresora.py --> script de pruebas unitarias que verifica el correcto funcionamiento de la impresora. Este script se corre por aparte.
 
 En general, se priorizó obtener un código sencillo y altamente modificable.
+Se realizó el programa desde cero.
 
 ### Funcionamiento
 Parámetros para dibujar un número: size y el número. Size define el tamaño en el que se debe dibujar el número.
